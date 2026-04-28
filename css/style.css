@@ -4,7 +4,6 @@
    common
 ========================= */
 body {
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
   color: #333333;
   background: #ffffff;
   line-height: 1.6;
@@ -40,6 +39,15 @@ img {
 ========================= */
 .header {
   background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+main {
+  padding-top: 80px;
 }
 
 .header-inner {
@@ -177,6 +185,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 100px;
 }
 
 .skills-item {
@@ -187,14 +196,6 @@ img {
 
 .skills-item:hover {
   opacity: 1;
-}
-
-.skills-item:not(:nth-child(3n)) {
-  margin-right: 100px;
-}
-
-.skills-item:nth-child(-n+3) {
-  margin-bottom: 100px;
 }
 
 /* =========================
@@ -309,7 +310,7 @@ img {
   }
 
   .work-image {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .work-content .section-title {
@@ -324,34 +325,14 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    gap: 0;
   }
-
+  
   .skills-item {
     width: 300px;
     margin: 0;
   }
-
-  .skills-item:not(:nth-child(3n)) {
-    margin-right: 0;
-  }
-
-  .skills-item:nth-child(-n+3) {
-    margin-bottom: 0;
-  }
-
-  .skills-item:nth-child(odd) {
-    margin-right: 0;
-  }
-
-  .skills-item:nth-child(-n+4) {
-    margin-bottom: 0;
-  }
-
-  .skills-item + .skills-item {
-    margin-top: 0;
-  }
-
+  
   .skills-item:nth-child(4) {
     margin-top: 80px;
   }
@@ -361,6 +342,11 @@ img {
    sp
 ========================= */
 @media screen and (max-width: 767px) {
+
+  main {
+    padding-top: 60px;
+  }
+
   .inner {
     width: 97%;
   }
@@ -405,35 +391,23 @@ img {
   .work-content .section-title {
     margin-bottom: 35px;
   }
-
-   .skills-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.skills-item {
-  width: 300px;
-  margin: 0;
-}
-
-.skills-item:nth-child(odd) {
-  margin-right: 0;
-}
-
-.skills-item:nth-child(-n+4) {
-  margin-bottom: 0;
-}
-
-.skills-item + .skills-item {
-  margin-top: 0;
-}
-
-.skills-item:nth-child(4) {
-  margin-top: 80px;
-}
-
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  
+  .skills-item {
+    width: 143px;
+    margin: 0;
+  }
+  
+  .skills-item:nth-child(4) {
+    margin-top: 80px;
+  }
+  
   .plan-table th {
     font-size: 14px;
     line-height: 22px;
