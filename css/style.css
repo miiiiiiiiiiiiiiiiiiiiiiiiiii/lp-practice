@@ -433,8 +433,12 @@ main {
     margin: 0;
   }
   
-  .skills-item:nth-child(4) {
-    margin-top: 80px;
+  .skills-inner .section-title {
+    margin-bottom: 50px;
+  }
+
+  .skills-list {
+    gap: 0;
   }
   
   .plan-table th {
@@ -458,6 +462,10 @@ main {
   .sns-link {
     display: block;
     width: 100%;
+    padding: 0;
+    color: #8c8c8c;
+    font-size: 28px;
+    line-height: 1;
     text-align: center;
   }
 
