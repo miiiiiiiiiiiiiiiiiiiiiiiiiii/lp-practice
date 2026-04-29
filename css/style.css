@@ -214,11 +214,13 @@ main {
 .plan-table {
   width: 100%;
   table-layout: fixed;
+  border-collapse: collapse;
 }
 
 .plan-table th,
 .plan-table td {
-  border: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
   text-align: center;
   vertical-align: middle;
   padding: 10px 0;
@@ -243,6 +245,10 @@ main {
   background: #6ba7eb;
 }
 
+.plan-table tr:first-child td {
+  font-weight: 700;
+}
+
 .plan-table tr:nth-child(odd):not(:first-child) th,
 .plan-table tr:nth-child(odd):not(:first-child) td {
   background: #e0efff;
@@ -251,6 +257,16 @@ main {
 .plan-table tr:nth-child(even) th,
 .plan-table tr:nth-child(even) td {
   background: #f9f9f9;
+}
+
+.plan-table tr td:last-child,
+.plan-table tr th:last-child {
+  border-right: none;
+}
+
+.plan-table tr:last-child td,
+.plan-table tr:last-child th {
+  border-bottom: none;
 }
 
 /* =========================
@@ -265,17 +281,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 185px;
 }
 
 .sns-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 60px;
   color: #8c8c8c;
   font-size: 40px;
   line-height: 1;
-  overflow: hidden;
   transition: background-color 0.5s;
-  display: inline-block;  
-  padding: 25px;
 }
 
 .sns-link:hover {
